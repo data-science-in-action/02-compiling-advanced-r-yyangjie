@@ -19,24 +19,52 @@ Error in install.packages : 读取链结时发生了错误
 > .libPaths(c("Your path",.libPaths()))
 > .libPaths()
 
-3.提示缺什么包就安装什么包,安装Rtools
-
-4.>Quitting from lines 96-103 (Functionals.Rmd) 
+3.>Quitting from lines 96-103 (Functionals.Rmd) 
 Error in loadNamespace(name) : 不存在叫'emo'这个名字的程辑包
 Calls: local ... loadNamespace -> withRestarts -> withOneRestart -> doWithOneRestart
 停止执行
-Error in Rscript_render(f, render_args, render_meta, add1, add2) : 
-  Failed to compile Functionals.Rmd
-Calls: <Anonymous> -> render_new_session -> Rscript_render
-停止执行
 
 解决方法 ：
-devtools::install_github("hadley/sloop")
-devtools::install_github("hadley/emo")
+在R studio terminal 或者Git bash 上输入
+$git config --global http.ssBackend "openssl"
+$git config --http.sslCAInfo D:/adv-r-master
+>install.packages("devtools")
+>library(devtools)
+>devtools::install_github("hadley/sloop")
+>devtools::install_github("hadley/emo")
 
-5.https://yihui.org/tinytex/#for-r-users)(The
+
+4.>
+Quitting from lines 209-221 (Big-picture.Rmd) 
+错误: The dbplyr package is required to communicate with database backends.
+
+解决方法：Install.packages("dbplyr")
+
+5.>
+Quitting from lines 233-234 (Perf-measure.Rmd) 
+错误: `ggbeeswarm` must be installed to use `type = "beeswarm"` option.
+
+解决方法：Install.packages("ggbeeswarm")
+
+6.>
+Quitting from lines 77-84 (Rcpp.Rmd) 
+Error in sourceCpp(code = code, env = env, rebuild = rebuild, cacheDir = cacheDir,  : 
+  Error 1 occurred building shared library.
+Calls: local ... withVisible -> eval -> eval -> cppFunction -> sourceCpp
+
+未解决 
+
+7.>
+报错及解决参考文献：
+http://brettklamer.com/diversions/statistical/compile-hadleys-advanced-r-programming-to-a-pdf/
+https://github.com/statcomputing/compiling-advanced-r-Kun73/blob/master/README.md
+https://yihui.org/tinytex/#for-r-users)(The
 >install.packages('tinytex')
 >tinytex::install_tinytex()
+# writeLines(c(
+#   '\\documentclass{article}',
+#   '\\begin{document}', 'Hello world!', '\\end{document}'
+# ), 'test.tex')
 >tinytex::pdflatex('test.tex')
 
-更新中...
+更新中。。。。。。
