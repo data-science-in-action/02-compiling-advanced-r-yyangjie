@@ -1,6 +1,6 @@
 # 02-compiling-advanced-r-yyangjie
 ---
-title: "Problems and Solutions"
+title: "Problems and Solutions about Compiling Advanced R "
 author: "Jie Yang"
 data:2020/3/20
 ---
@@ -52,15 +52,12 @@ Error in sourceCpp(code = code, env = env, rebuild = rebuild, cacheDir = cacheDi
   Error 1 occurred building shared library.
 Calls: local ... withVisible -> eval -> eval -> cppFunction -> sourceCpp
 
-未解决 
+解决方法：Install.packages("Rcpp")
 
-7.>
-报错及解决参考文献：
+7.缺少包就安装包，缺少字体就下载字体。
+
+8.>
+报错及解决参考：
 http://brettklamer.com/diversions/statistical/compile-hadleys-advanced-r-programming-to-a-pdf/
 https://github.com/statcomputing/compiling-advanced-r-Kun73/blob/master/README.md
 https://yihui.org/tinytex/#for-r-users)(The
->install.packages('tinytex')
->tinytex::install_tinytex()
->tinytex::pdflatex('test.tex')
-
-更新中。。。。。。
