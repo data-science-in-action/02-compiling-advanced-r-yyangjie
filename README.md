@@ -1,6 +1,10 @@
 # 02-compiling-advanced-r-yyangjie
-# 02-compiling-advanced-r-yyangjie
-安装packages遇到的错误
+---
+title: "Problems and Solutions"
+author: "Jie Yang"
+data:2020/3/20
+---
+
 1.> 
 Error in readRDS(dest) : 读取链结时发生了错误
 Error in install.packages : 读取链结时发生了错误
@@ -15,7 +19,7 @@ Error in install.packages : 读取链结时发生了错误
 > .libPaths(c("Your path",.libPaths()))
 > .libPaths()
 
-3.提示缺什么包就安装什么包
+3.提示缺什么包就安装什么包,安装Rtools
 
 4.>Quitting from lines 96-103 (Functionals.Rmd) 
 Error in loadNamespace(name) : 不存在叫'emo'这个名字的程辑包
@@ -33,10 +37,6 @@ devtools::install_github("hadley/emo")
 5.https://yihui.org/tinytex/#for-r-users)(The
 >install.packages('tinytex')
 >tinytex::install_tinytex()
-# writeLines(c(
-#   '\\documentclass{article}',
-#   '\\begin{document}', 'Hello world!', '\\end{document}'
-# ), 'test.tex')
 >tinytex::pdflatex('test.tex')
 
 更新中...
