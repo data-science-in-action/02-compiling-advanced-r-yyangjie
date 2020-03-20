@@ -61,10 +61,6 @@ https://github.com/statcomputing/compiling-advanced-r-Kun73/blob/master/README.m
 https://yihui.org/tinytex/#for-r-users)(The
 >install.packages('tinytex')
 >tinytex::install_tinytex()
-# writeLines(c(
-#   '\\documentclass{article}',
-#   '\\begin{document}', 'Hello world!', '\\end{document}'
-# ), 'test.tex')
 >tinytex::pdflatex('test.tex')
 
 更新中。。。。。。
